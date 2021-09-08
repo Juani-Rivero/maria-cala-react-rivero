@@ -1,3 +1,9 @@
+.fa-shopping-cart {
+  color: #000;
+  font-size: 2em;
+  margin-right: 1em;
+}
+
 .btn-search {
   background-color: #61DBFB;
   border-color: #61DBFB;
@@ -11,6 +17,20 @@
 .logo {
   font-size: 2em;
   font-weight: 200;
+}
+
+.greeting {
+  margin: 3em 2em;
+  background-color: #61DBFB;
+  height: 6em;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 2em;
 }
 
 /*# sourceMappingURL=style.css.map */
