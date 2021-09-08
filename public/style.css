@@ -1,0 +1,16 @@
+.btn-search {
+  background-color: #61DBFB;
+  border-color: #61DBFB;
+  color: #FFFFFF;
+}
+
+.btn-search:hover {
+  background-color: #004A98;
+}
+
+.logo {
+  font-size: 2em;
+  font-weight: 200;
+}
+
+/*# sourceMappingURL=style.css.map */
