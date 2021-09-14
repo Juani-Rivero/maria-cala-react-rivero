@@ -5,9 +5,20 @@ function ItemCount() {
 
   return (
     <div className="container item-count">
+      <div className="row mb-3">
         <h2>Item Counter</h2>
-        <button onClick={() => setCount(count + 1)} className="btn btn-warning btn-count">Click Aquí</button>
-      <p>Hiciste click <b> {count} </b> veces</p>
+      </div>
+      <div className="row">
+        <div className="col d-flex align-items-center">
+          <a onClick={() => setCount(count - 1)} className="btn btn-warning btn-count"><i class="fas fa-minus"></i></a>
+        </div>
+        <div className="col d-flex align-items-center">
+          <p className="count"><b>{count}</b></p>
+        </div>
+        <div className="col d-flex align-items-center">
+          <a onClick={() => setCount(count + 1)} className="btn btn-warning btn-count"><i class="fas fa-plus"></i></a>
+        </div>
+      </div>
     </div>
   );
 }

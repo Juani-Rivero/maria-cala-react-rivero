@@ -38,10 +38,8 @@ h2 {
   width: 300px;
 }
 
-.btn-count {
-  height: 60px;
-  width: 150px;
-  margin: 20px 0;
+.count {
+  font-size: 5em;
 }
 
 /*# sourceMappingURL=style.css.map */
