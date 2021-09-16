@@ -3,7 +3,7 @@ import "./App.css";
 import Navbar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemCount from "./components/ItemCount/ItemCount";
-import Poke from "./components/Poke/Poke";
+import ItemList from "./components/ItemList/ItemList";
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
       <main>
         <ItemListContainer name="Usuario" />
         <ItemCount />
+        <ItemList />
       </main>
     </div>
   );

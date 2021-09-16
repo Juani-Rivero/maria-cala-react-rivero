@@ -10,13 +10,13 @@ function ItemCount() {
       </div>
       <div className="row">
         <div className="col d-flex align-items-center">
-          <a onClick={() => setCount(count - 1)} className="btn btn-warning btn-count"><i class="fas fa-minus"></i></a>
+          <a onClick={() => setCount(count - 1)} className="btn btn-warning btn-count"><i className="fas fa-minus"></i></a>
         </div>
         <div className="col d-flex align-items-center">
           <p className="count"><b>{count}</b></p>
         </div>
         <div className="col d-flex align-items-center">
-          <a onClick={() => setCount(count + 1)} className="btn btn-warning btn-count"><i class="fas fa-plus"></i></a>
+          <a onClick={() => setCount(count + 1)} className="btn btn-warning btn-count"><i className="fas fa-plus"></i></a>
         </div>
       </div>
     </div>
