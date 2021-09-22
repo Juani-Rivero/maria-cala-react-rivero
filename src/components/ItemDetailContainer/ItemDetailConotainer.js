@@ -1,8 +1,8 @@
 import * as React from "react";
-import Item from "../Item/Item.json"
-import Card from "../Card/Card";
+import ItemDetail from "../ItemDetail/ItemDetail";
 
-const ItemList = () => {
+
+const ItemDetailContainer = () => {
 
     const [data, setData] = React.useState([]);
     const [loading, setLoading] = React.useState(false);
@@ -10,22 +10,32 @@ const ItemList = () => {
   
     React.useEffect(() => {
 
-    //Me parece que el error está en la importación del json en la línea de acá abajo
-    const url = Item;
+
 
       setLoading(true);
-      fetch(url)
-        .then((response) => {
-          if (response.ok) {
-            return response.json();
-          } else {
-            throw response;
-          }
-        })
-        .then((data) => setData(data))
+      getProductos()
+        .then((response) => setData(response))
         .catch((error) => setError(error))
         .finally(() => setLoading(false));
     }, []);
+
+    const getProductos = () => {
+      const url = 'https://fakestoreapi.com/products?limit=1';
+      return new Promise ((resolve) => {
+        setTimeout(()=> {
+          resolve(
+            fetch(url)
+            .then((response) => {
+              if (response.ok) {
+                return response.json();
+              } else {
+                throw response;
+              }
+            })
+          )
+        }, 5000)
+      })
+    }
   return (
     <>
       <div style={{ display: "flex", justifyContent: "space-evenly", flexWrap: "wrap" }}>
@@ -38,9 +48,8 @@ const ItemList = () => {
 
         {data?.map((item) => {
           return (
-            <Card
-              key={item.id}
-              name={item.name}
+            <ItemDetail
+              title={item.title}
               description={item.description}
               image={item.image}
               price={item.price}
@@ -52,4 +61,4 @@ const ItemList = () => {
   );
 };
 
-export default ItemList;
+export default ItemDetailContainer;
