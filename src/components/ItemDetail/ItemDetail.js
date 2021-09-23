@@ -1,4 +1,4 @@
-const ItemDetail = ({ title, description, image, price, }) => {
+const ItemDetail = ({ title, description, image, price }) => {
   return (
     <div className="cardContainer col-lg-4">
       <h3 className="cardTitle">{title}</h3>
