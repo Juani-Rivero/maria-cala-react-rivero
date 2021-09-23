@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
@@ -8,16 +8,20 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCono
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <Navbar />
-      </header>
-      <main>
-        <ItemListContainer name="Usuario" />
-        <ItemCount />
-        <ItemDetailContainer />
-      </main>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Switch>
+        <Route exact path="/">
+          <ItemListContainer name="Usuario" />
+        </Route>
+        <Route exact path="/itemcount">
+          <ItemCount />
+        </Route>
+        <Route exact path="/itemdetailcontainer">
+          <ItemDetailContainer />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 

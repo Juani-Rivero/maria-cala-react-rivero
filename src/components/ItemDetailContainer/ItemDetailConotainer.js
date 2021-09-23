@@ -4,27 +4,27 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 
 const ItemDetailContainer = () => {
 
-    const [data, setData] = React.useState([]);
-    const [loading, setLoading] = React.useState(false);
-    const [error, setError] = React.useState(null);
-  
-    React.useEffect(() => {
+  const [data, setData] = React.useState([]);
+  const [loading, setLoading] = React.useState(false);
+  const [error, setError] = React.useState(null);
+
+  React.useEffect(() => {
 
 
 
-      setLoading(true);
-      getProductos()
-        .then((response) => setData(response))
-        .catch((error) => setError(error))
-        .finally(() => setLoading(false));
-    }, []);
+    setLoading(true);
+    getProductos()
+      .then((response) => setData(response))
+      .catch((error) => setError(error))
+      .finally(() => setLoading(false));
+  }, []);
 
-    const getProductos = () => {
-      const url = 'https://fakestoreapi.com/products?limit=1';
-      return new Promise ((resolve) => {
-        setTimeout(()=> {
-          resolve(
-            fetch(url)
+  const getProductos = () => {
+    const url = 'https://fakestoreapi.com/products?limit=18';
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(
+          fetch(url)
             .then((response) => {
               if (response.ok) {
                 return response.json();
@@ -32,10 +32,10 @@ const ItemDetailContainer = () => {
                 throw response;
               }
             })
-          )
-        }, 5000)
-      })
-    }
+        )
+      }, 2000)
+    })
+  }
   return (
     <>
       <div style={{ display: "flex", justifyContent: "space-evenly", flexWrap: "wrap" }}>
@@ -48,12 +48,14 @@ const ItemDetailContainer = () => {
 
         {data?.map((item) => {
           return (
+            <div className="row itemDetailcontainer">
             <ItemDetail
               title={item.title}
               description={item.description}
               image={item.image}
               price={item.price}
             />
+            </div>
           );
         })}
       </div>

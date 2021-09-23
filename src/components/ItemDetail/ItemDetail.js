@@ -1,9 +1,9 @@
-const ItemDetail = ({ title, description, image, price }) => {
+const ItemDetail = ({ title, description, image, price, }) => {
   return (
-    <div className="cardContainer">
+    <div className="cardContainer col-lg-4">
       <h3 className="cardTitle">{title}</h3>
-      <div>
-        <img src={image} alt={title} className="cardImg"/>
+      <div  className="cardImgContainer">
+        <img src={image} alt={title} className="cardImg" />
       </div>
       <p className="cardDescription">{description}</p>
       <p className="cardPrice">$ {price}</p>

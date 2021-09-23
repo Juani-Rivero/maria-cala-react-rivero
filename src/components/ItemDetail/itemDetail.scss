@@ -7,6 +7,10 @@
     border-radius: 10px;
     margin-bottom: 5em;
 }
+.cardImgContainer {
+    display: flex;
+    justify-content: space-around;
+}
 
 .cardTitle {
     font-size: 1.2em;
@@ -25,4 +29,8 @@
 .cardPrice {
     font-size: 0.7em;
     font-weight: 700;
+}
+
+.itemDetailcontainer {
+    margin-top: 6em;
 }
