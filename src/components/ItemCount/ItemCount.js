@@ -5,9 +5,6 @@ function ItemCount({ count, btnSubs, btnAdd, comprar }) {
 
   return (
     <div className="container item-count">
-      <div className="row mb-3">
-        <h2>Item Counter</h2>
-      </div>
       <div className="row">
         <div className="col d-flex align-items-center">
           <a onClick={() => btnSubs()} className="btn btn-warning btn-count"><i className="fas fa-minus"></i></a>
