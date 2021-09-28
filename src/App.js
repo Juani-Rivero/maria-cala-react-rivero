@@ -4,6 +4,7 @@ import Navbar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemCount from "./components/ItemCount/ItemCount";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailConotainer";
+import Cart from "./Pages/Cart"
 
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
         </Route>
         <Route exact path="/itemdetailcontainer">
           <ItemDetailContainer />
+        </Route>
+        <Route exact path="/cart">
+          <Cart />
         </Route>
       </Switch>
     </BrowserRouter>

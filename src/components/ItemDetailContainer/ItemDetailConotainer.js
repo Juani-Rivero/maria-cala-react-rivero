@@ -35,7 +35,7 @@ const ItemDetailContainer = () => {
         )
       }, 2000)
     })
-  }
+  };
   return (
     <>
       <div style={{ display: "flex", justifyContent: "space-evenly", flexWrap: "wrap" }}>
