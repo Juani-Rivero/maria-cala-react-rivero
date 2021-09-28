@@ -5,7 +5,6 @@ import ItemCount from "../ItemCount/ItemCount";
 const ItemDetail = ({ title, description, image, price }) => {
 
   const [count, setCount] = React.useState(0);
-  const [cantAComprar, setCantAComprar] = React.useState(0);
 
   const btnAdd = () => {
     setCount((count) => count + 1);
