@@ -1,6 +1,7 @@
 import Cart from "../Cart/Cart";
 import {Link} from 'react-router-dom';
 
+
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -31,7 +32,9 @@ function Navbar() {
           </ul>
           <form className="d-flex">
             <div>
+            <Link className="nav-link" to={`/cart`}>
               <Cart />
+              </Link>
             </div>
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
             <button className="btn btn-outline-success btn-search" type="submit">Buscar</button>
