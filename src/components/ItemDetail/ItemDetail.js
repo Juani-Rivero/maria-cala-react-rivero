@@ -8,7 +8,7 @@ const ItemDetail = ({ title, description, image, price }) => {
 
   const { addItem } = useCart();
   const [count, setCount] = React.useState(0);
-  let dataToSend
+  let dataToSend;
   const btnAdd = () => {
     setCount((count) => count + 1);
     dataToSend = {
