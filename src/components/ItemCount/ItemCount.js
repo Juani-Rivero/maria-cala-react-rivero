@@ -16,9 +16,9 @@ function ItemCount({ count, btnSubs, btnAdd, comprar }) {
           <a onClick={() => btnAdd()} className="btn btn-warning btn-count"><i className="fas fa-plus"></i></a>
         </div>
       </div>
-    <Link to={`/cart`}>
+
     <button className="btn btn-succes" type="button" onClick={() => comprar()}>¡Comprar ahora!</button>
-    </Link>
+
     </div>
   );
 }
