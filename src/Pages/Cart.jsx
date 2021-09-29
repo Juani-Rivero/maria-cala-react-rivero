@@ -34,7 +34,7 @@ const Cart = () => {
                           <td>En stock</td>
                           <td className="text-right"><span name="price">{item.qty}</span></td>
                           <td className="text-right"> $<span name="price">{item.price}</span></td>
-                          <td className="text-right"><button className="btn btn-sm btn-danger" onClick={() => { removeItem() }} ><i className="fa fa-trash"></i> </button> </td>
+                          <td className="text-right"><button className="btn btn-sm btn-danger" onClick={() =>{removeItem(item.id)}} ><i className="fa fa-trash"></i> </button> </td>
                         </tr>
                     )
                   })}
