@@ -34,7 +34,7 @@ const ItemDetailContainer = () => {
               }
             })
         )
-      }, 2000)
+      },)
     })
   };
   return (
@@ -51,6 +51,7 @@ const ItemDetailContainer = () => {
           return (
             <div className="row itemDetailcontainer">
             <ItemDetail
+              id={item.id}
               title={item.title}
               description={item.description}
               image={item.image}
