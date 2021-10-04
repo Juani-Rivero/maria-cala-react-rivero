@@ -1,6 +1,31 @@
+import { useCart } from "../../context/CartContext";
+
 function Cart() {
+    const { cart } = useCart();
+    let itemCount = 0;
+
+    {
+        cart?.map((item) => {
+            itemCount += item.qty;
+        })
+    };
+
     return (
-        <a><i className="fas fa-shopping-cart"></i></a>
+        <div>
+            {itemCount === 0 && (<div className="cart-badge"><span id="cart-count"><i className="fas fa-shopping-cart"></i></span></div>)}
+            {itemCount > 0 && (
+                <div className="cart-badge"> 
+                    <span className="d-flex flex-row">
+                        <i className="fas fa-shopping-cart"></i>
+                        <span className="itemCount">
+                            <h6 className="number">{itemCount}</h6>
+                        </span>
+                    </span>
+                </div>
+
+            )}
+
+        </div>
     )
 };
 

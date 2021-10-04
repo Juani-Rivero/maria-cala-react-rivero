@@ -1,5 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root {
+    --font: 'Poppins', sans-serif;
+  }
+
+.cart-badge {
+    margin-right: 1em;
+}
 .fa-shopping-cart {
     color: #000;
     font-size: 2em;
-    margin-right: 1em;
+    padding-right: 5px;
+}
+
+.itemCount {
+
+    width: 28px;
+    height: 28px;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #6085f7;
+    color: #ffffff;
+    font-family: var(--font);
+}
+
+.number {
+    margin: 2px 2px;
 }

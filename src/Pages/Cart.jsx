@@ -8,7 +8,7 @@ const Cart = () => {
   const { removeItem } = useCart();
   const { clear } = useCart();
   console.log(cart)
-  const empty = cart.length;
+  const cartLenght = cart.length;
   let subtotal = 0;
   let envio = 0;
   let total = 0;
@@ -19,7 +19,7 @@ const Cart = () => {
 
   return (
     <>
-    {empty === 0 && (
+    {cartLenght === 0 && (
     <>
     <div className="container d-flex justify-content-around flex-column">
     <h2 className="mt-5 text-center">Su carrito está vacío!</h2>
@@ -29,7 +29,7 @@ const Cart = () => {
     </div>
     </>
     )}
-    {empty > 0 && (
+    {cartLenght > 0 && (
       <div className="container mb-4">
         <div className="row">
           <div className="col-12">
