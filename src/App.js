@@ -1,3 +1,4 @@
+import * as React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/NavBar/NavBar";
@@ -8,7 +9,10 @@ import Cart from "./Pages/Cart"
 import { CartProvider } from "./context/CartContext";
 
 
+
 function App() {
+
+
   return (
     <CartProvider>
       <BrowserRouter>

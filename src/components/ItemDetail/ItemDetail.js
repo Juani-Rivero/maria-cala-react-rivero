@@ -33,7 +33,6 @@ const ItemDetail = ({ id, title, description, image, price }) => {
 
   return (
     <div className="cardContainer col-lg-4">
-      <p>{id}</p>
       <h3 className="cardTitle">{title}</h3>
       <div  className="cardImgContainer">
         <img src={image} alt={title} className="cardImg" />
