@@ -66,7 +66,7 @@ const Cart = () => {
           <div className="row">
             <div className="col-12">
               <div className="table-responsive">
-                <table className="table table-striped">
+                <table className="table table-striped mt-5">
                   <thead>
                     <tr>
                       <th scope="col"> </th>
@@ -171,7 +171,7 @@ const Cart = () => {
             </div>
             <div className="col mb-2">
               <div className="row mb-5">
-                <form>
+                <form className="mt-5" style={{border: "solid 3px black", borderRadius: "15px"}}>
                   <h1>Complete sus datos</h1>
                   <div class="mb-3">
                     <label htmlFor="name" class="form-label">

@@ -29,7 +29,7 @@ const Hogar = () => {
     return (
         <>
             <div className="container">
-                <h1 style={{ fontFamily: "Montserrat', sans-serif", fontWeight: 400, textAlign: "center", fontSize: "4em" }}>Línea Hogar</h1>
+                <h1 style={{ fontFamily: "Montserrat', sans-serif", fontWeight: 400, textAlign: "center", fontSize: "4em", marginTop: "50px" }}>Línea Hogar</h1>
                 <div className="row mt-3">
                     {loading && <p>Cargando...</p>}
                     {error && (

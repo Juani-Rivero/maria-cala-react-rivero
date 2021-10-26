@@ -29,7 +29,7 @@ const Aromatizantes = () => {
     return (
         <>
             <div className="container">
-                <h1 style={{ fontFamily: "Montserrat', sans-serif", fontWeight: 400, textAlign: "center", fontSize: "4em" }}>Aromatizantes</h1>
+                <h1 style={{ fontFamily: "Montserrat', sans-serif", fontWeight: 400, textAlign: "center", fontSize: "4em", marginTop: "50px" }}>Aromatizantes</h1>
                 <div className="row mt-3">
                     {loading && <p>Cargando...</p>}
                     {error && (
