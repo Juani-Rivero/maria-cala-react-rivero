@@ -32,8 +32,8 @@ const ItemDetail = ({ id, title, description, image, price }) => {
 
 
   return (
-    <div className="card" style={{ width: "18rem", height: "75vh" }}>
-      <img src={image} className="card-img-top" alt={title} />
+    <div className="card" style={{ width: "18rem", height: "75vh", borderRadius: "15px" }}>
+      <img src={image} className="card-img-top" alt={title} style={{borderRadius: "15px"}} />
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{description}</p>
