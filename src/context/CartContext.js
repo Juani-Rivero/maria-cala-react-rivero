@@ -23,7 +23,7 @@ export const CartProvider = ({ children }) => {
     }
   };
 
- 
+
   const exist = (id) => {
     const isIqual = cart.find((item) => item.id === id);
     return isIqual === undefined ? false : true;
@@ -52,12 +52,12 @@ export const CartProvider = ({ children }) => {
   const cartSummary = () => {
     let subtotal = 0;
     let envio = 0;
-    
+
     cart.forEach((item) => {
       subtotal += (item.price * item.qty);
       envio = (parseFloat(subtotal * 0.15));
     });
-    
+
     setSubtotal(subtotal);
     setEnvio(envio);
     setTotal(parseFloat(subtotal + envio));

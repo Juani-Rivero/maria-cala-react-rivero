@@ -62,48 +62,53 @@ h2 {
 .item-count {
   height: 300px;
   width: 300px;
+  align-items: baseline;
 }
 
 .count {
-  font-size: 5em;
+  font-size: 2em;
 }
 
-.cardContainer {
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-  height: max-content;
-  border: 3px solid black;
-  border-radius: 10px;
-  margin-bottom: 5em;
+.btn-comprar {
+  background-color: #BEBFC3;
+  border-color: #BEBFC3;
 }
 
-.cardImgContainer {
-  display: flex;
-  justify-content: space-around;
-}
-
-.cardTitle {
-  font-size: 1.2em;
-  padding-top: 20px;
-}
-
-.cardImg {
-  width: 250px;
-  height: 250px;
-}
-
-.cardDescription {
-  font-size: 0.7em;
-}
-
-.cardPrice {
-  font-size: 0.7em;
-  font-weight: 700;
+.btn-comprar:hover {
+  background-color: cadetblue;
 }
 
 .itemDetailcontainer {
   margin-top: 6em;
+}
+
+.card-item-count {
+  padding-bottom: 0;
+}
+
+.home-text {
+  display: flex;
+  justify-content: baseline;
+  align-content: center;
+}
+
+.img-unique {
+  display: flex;
+  transition: transform 0.2s ease-in-out;
+  justify-content: center;
+}
+
+.img-unique:hover {
+  transform: scale(1.1);
+}
+
+.img-unique img {
+  height: 50vh;
+}
+
+/* GENERAL STYLES*/
+body {
+  background-color: #efe7e1;
 }
 
 /*# sourceMappingURL=style.css.map */

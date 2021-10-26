@@ -26,24 +26,25 @@ const ItemDetail = ({ id, title, description, image, price }) => {
       price: price,
       img: image
     }
-    
+
     addItem(dataToSend);
   };
 
 
   return (
-    <div className="cardContainer col-lg-4">
-      <h3 className="cardTitle">{title}</h3>
-      <div  className="cardImgContainer">
-        <img src={image} alt={title} className="cardImg" />
+    <div className="card" style={{ width: "18rem", height: "75vh" }}>
+      <img src={image} className="card-img-top" alt={title} />
+      <div className="card-body">
+        <h5 className="card-title">{title}</h5>
+        <p className="card-text">{description}</p>
+        <div>
+          <ItemCount count={count}
+            btnSubs={btnSubs}
+            btnAdd={btnAdd}
+            comprar={addToCart}
+          />
+        </div>
       </div>
-      <p className="cardDescription">{description}</p>
-      <p className="cardPrice">$ {price}</p>
-      <ItemCount count={count}
-      btnSubs={btnSubs}
-      btnAdd={btnAdd}
-      comprar={addToCart}
-      />
     </div>
   );
 };

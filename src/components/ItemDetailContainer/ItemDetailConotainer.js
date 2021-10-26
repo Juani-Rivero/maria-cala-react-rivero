@@ -15,14 +15,14 @@ const ItemDetailContainer = () => {
     const productCollection = db.collection("products");
 
     productCollection.get()
-    .then((querySnapshot) => {
-      if(querySnapshot.empty) {
-        console.log("No hay productos")
-      }else{
-        setData(querySnapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})));
-      }
-    })
-    .catch(() => {});
+      .then((querySnapshot) => {
+        if (querySnapshot.empty) {
+          console.log("No hay productos")
+        } else {
+          setData(querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+        }
+      })
+      .catch(() => { });
   }, []);
 
 
@@ -39,13 +39,15 @@ const ItemDetailContainer = () => {
         {data?.map((item) => {
           return (
             <div className="row itemDetailcontainer">
-              <ItemDetail
-                id={item.id}
-                title={item.title}
-                description={item.description}
-                image={item.image}
-                price={item.price}
-              />
+              <div className="col-lg-4">
+                <ItemDetail
+                  id={item.id}
+                  title={item.title}
+                  description={item.description}
+                  image={item.image}
+                  price={item.price}
+                />
+              </div>
             </div>
           );
         })}
@@ -55,33 +57,3 @@ const ItemDetailContainer = () => {
 };
 
 export default ItemDetailContainer;
-
-
-// React.useEffect(() => {
-
-
-
-//   setLoading(true);
-//   getProductos()
-//     .then((response) => setData(response))
-//     .catch((error) => setError(error))
-//     .finally(() => setLoading(false));
-// }, []);
-
-// const getProductos = () => {
-//   const url = 'https://fakestoreapi.com/products?limit=18';
-//   return new Promise((resolve) => {
-//     setTimeout(() => {
-//       resolve(
-//         fetch(url)
-//           .then((response) => {
-//             if (response.ok) {
-//               return response.json();
-//             } else {
-//               throw response;
-//             }
-//           })
-//       )
-//     },)
-//   })
-// };

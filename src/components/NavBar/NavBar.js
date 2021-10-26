@@ -1,5 +1,5 @@
 import Cart from "../Cart/Cart";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 function Navbar() {
@@ -13,27 +13,29 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-            <Link className="nav-link" to={`/`}>Home</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to={`/itemcount`}>Item Count</Link>
+              <Link className="nav-link" to={`/`}>Home</Link>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a className="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Nuestros Productos
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><Link className="nav-link" to={`/itemdetailcontainer`}>Todos los productos</Link></li>
-                <li><a className="dropdown-item" href="#">Cercamina Luna</a></li>
+                <li><Link className="nav-link" to={`/textiles`}>Textiles</Link></li>
+                <li><Link className="nav-link" to={`/cocina`}>Cocina</Link></li>
+                <li><Link className="nav-link" to={`/ceramica`}>Cerámica</Link></li>
+                <li><Link className="nav-link" to={`/aromatizantes`}>Aromatizantes</Link></li>
+                <li><Link className="nav-link" to={`/hogar`}>Hogar</Link></li>
                 <li><hr className="dropdown-divider" /></li>
-                <li><a className="dropdown-item" href="#">Ceramica Pez</a></li>
+                <li><Link className="nav-link" to={`/itemdetailcontainer`}>Todos los productos</Link></li>
+
+
               </ul>
             </li>
           </ul>
           <form className="d-flex">
             <div>
-            <Link className="nav-link" to={`/cart`}>
-              <Cart />
+              <Link className="nav-link" to={`/cart`}>
+                <Cart />
               </Link>
             </div>
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
