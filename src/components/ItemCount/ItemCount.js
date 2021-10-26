@@ -19,7 +19,7 @@ function ItemCount({ count, btnSubs, btnAdd, comprar }) {
       <div className="row">
         <div className="col-3"></div>
         <div className="col-6">
-          <button className="btn btn-comprar" type="button" onClick={() => comprar()}>Comprar</button>
+          <button className="btn btn-comprar" type="button" onClick={() => comprar()}>Agregar</button>
         </div>
         <div className="col-3"></div>
       </div>
