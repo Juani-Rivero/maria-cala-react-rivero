@@ -29,7 +29,8 @@ const Ceramica = () => {
     return (
         <>
             <div className="container">
-                <div className="row mt-5">
+                <h1 style={{ fontFamily: "Montserrat', sans-serif", fontWeight: 400, textAlign: "center", fontSize: "4em" }}>Cerámica</h1>
+                <div className="row mt-3">
                     {loading && <p>Cargando...</p>}
                     {error && (
                         <p>
