@@ -37,7 +37,7 @@ const ItemDetail = ({ id, title, description, image, price }) => {
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{description}</p>
-        <div>
+        <div style={{ position: "absolute", bottom: -180 }}>
           <ItemCount count={count}
             btnSubs={btnSubs}
             btnAdd={btnAdd}
